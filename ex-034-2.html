@@ -16,15 +16,24 @@ $('.btn').on('click', function() {
   var year = parseInt($('[name="year"]').val(), 10);
 
   // code here...
-  if ((year % 4 ===0 && year % 100 !== 0)||(year % 400 === 0)||(year % 1000 === 0))
-  {
-    alert("這年是閏年");
-  }
-else
-  {
-    alert("這年是平年")
-  }
+//   if ((year % 4 ===0 && year % 100 !== 0)||(year % 400 === 0)||(year % 1000 === 0))
+//   {
+//     alert("這年是閏年");
+//   }
+// else
+//   {
+//     alert("這年是平年")
+//   }
 
+	//use Date Object
+	if(new Date(year, 2, 0).getDate() === 29)
+	{
+	   alert("這年是閏年");
+	}
+	else
+	{
+		alert("這年是平年")
+	}
 });
 
 
