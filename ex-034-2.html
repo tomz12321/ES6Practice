@@ -16,15 +16,7 @@ $('.btn').on('click', function() {
   var year = parseInt($('[name="year"]').val(), 10);
 
   // code here...
-  if (year % 4 ===0 && year % 100 !== 0)
-  {
-    alert("這年是閏年");
-  }
-else if (year % 400 === 0)
-  {
-    alert("這年是閏年");
-  }
-else if (year % 1000 === 0)
+  if ((year % 4 ===0 && year % 100 !== 0)||(year % 400 === 0)||(year % 1000 === 0))
   {
     alert("這年是閏年");
   }
