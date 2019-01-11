@@ -105,7 +105,11 @@
 <script>
 
 $('.btn').on('click', function(){
-  //$(.card).toggleClass($(.select).val());
+  $('.card').removeClass('col-sm-1');
+  $('.card').removeClass('col-sm-2');
+  $('.card').removeClass('col-sm-3');
+  $('.card').removeClass('col-sm-4');
+  $('.card').addClass($('.select').val());
 });
 
 </script>
