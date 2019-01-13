@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>練習</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+  // Q1: 印出 0 ~ 20 的所有數字，但跳過 3 的倍數
+  // 提示: 利用 % 來檢查是否整除
+  var num = 0;
+  while (num < 20)
+  {
+  	num++;
+  	if(num%3 === 0)
+  	{
+  		continue;
+  	}
+  	console.log(num);
+  }
+  // Q2: 迴圈從 0 跑到 20， 但遇到 12 結束迴圈
+  num = 0;
+  while (num < 20)
+  {
+  	num++;
+   	if(num === 12)
+   	{
+   		break;
+   	}
+   	console.log(num);
+  }
+
+</script>
+
+</body>
+</html>
