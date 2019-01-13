@@ -179,12 +179,21 @@
 
   $('.dialog-btn').on('click', function(){
     // 開啟燈箱
-
+    $('.mask').addClass('active');
+    //console.log($('.details').text());
+    var inputtext = $('.details').eq(0).text();
+    $('.dialog-box .content').text(inputtext);
   });
 
   $('.dialog-box .close').on('click', function(){
     // 關閉燈箱
+    $('.mask').removeClass('active');
 
+  });
+
+  $('.mask').on('click', function(e){
+    console.log(e.target);
+    //$(this).is('.dialog-box');
   });
 </script>
 
