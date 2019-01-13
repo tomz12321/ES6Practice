@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>五倍樂透自動選號機</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+/*
+Q:
+  規則: 從 01 到 49 選出六個不重複數字。
+  Math.random() 會得到一組 0 ~ 1 的隨機亂數。 ( 不包含 1 )
+  用 indexOf(n) 來判斷某元素是否存在於陣列內。
+*/
+
+// Math.floor( Math.random() * 49 + 1 )
+var r = Math.floor(Math.random()*49 + 1);
+var arr = [];
+while (arr.length < 6){
+	r = Math.floor(Math.random()*49 + 1);
+	if (arr.indexOf(r) === -1){
+		arr.push(r);
+	}
+}
+
+//print out array
+console.log(arr);
+
+//print out elements
+for (i = 0; i < arr.length; i++)
+{
+	console.log(arr[i]);	
+}
+
+</script>
+
+</body>
+</html>
