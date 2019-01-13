@@ -165,14 +165,15 @@
               // .eq(1)
               // .css('color','red');
 
-
-    $('h2').eq(1).css('color','red');
-    $('h2').css('font-size','16px');
-    $('h2').eq(0).css('color','blue');
-    $('h2').eq(2).css('color','blue');
-    $('h2').eq(3).css('color','blue');
-    $('h2').eq(4).css('color','blue');
-    $('h2').eq(5).css('color','blue');
+    //more efficient
+    var h2 = $('h2');
+    h2.eq(1).css('color','red');
+    h2.css('font-size','16px');
+    h2.eq(0).css('color','blue');
+    h2.eq(2).css('color','blue');
+    h2.eq(3).css('color','blue');
+    h2.eq(4).css('color','blue');
+    h2.eq(5).css('color','blue');
   });
 
 
