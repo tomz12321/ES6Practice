@@ -45,6 +45,15 @@
 
   // todo: 把前一個練習中的全選/取消合併成一個按鈕
   $('.btn-allChecked').on('click', function(){
+    //var isActive = false;
+    //$('input[name="chkbox"]').each(function(i,v){
+    //  console.log($(v).prop('checked'));
+    //  if ($(v).prop('checked'))
+    //{
+    //  isActive = true;
+    //}
+    //$('input[name="chkbox"]').prop('checked', !isActive);
+    //}
     if($('input[name="chkbox"]').prop('checked'))
     {
       $('input[name="chkbox"]').prop('checked', false);
