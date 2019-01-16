@@ -51,7 +51,18 @@
   <script type="text/javascript">
     // todo: 更改內文的文字大小, 並提醒使用者目前文字狀態
     $('.text-handler button').on('click', function(){
-
+      console.log($(this).attr('class'));
+      var selectButton = $(this).attr('class');
+      if (selectButton === 'text-small'){
+        $('.text-field').css('font-size','14px');
+      }
+      else if (selectButton === 'text-normal'){
+        $('.text-field').css('font-size','22px');
+      } 
+      else
+      {
+        $('.text-field').css('font-size','36px');
+      }
     });
   </script>
 
