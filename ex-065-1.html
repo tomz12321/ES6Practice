@@ -23,21 +23,29 @@
     font-size: 1.25em;
   }
 
+  .notice{
+    margin-top: 10px;
+    font-size: 1.25em;
+  }
+
   </style>
 </head>
 <body>
 
   <div contenteditable class="text-field"></div>
   <p class="msg"> 目前已輸入 <span class="count">0</span> 字 </p>
-
+    <div class="notice"> 還可以輸入 <span class="limit-count">50</span> 字 </div>
   <script src="scripts/jquery-3.1.0.js"></script>
 
   <script type="text/javascript">
     // todo: 計算輸入框內字數
+    var limit = 50;
+
     $('.text-field').on('input', function(){
       var inputtxt = $('.text-field').text().length;
       console.log(inputtxt);
       $('.count').text(inputtxt);
+      $('.limit-count').text(limit-inputtxt);
     });
   </script>
 
