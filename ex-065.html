@@ -51,44 +51,44 @@
   <script type="text/javascript">
     // todo: 更改內文的文字大小, 並提醒使用者目前文字狀態
     $('.text-handler button').on('click', function(){
-      console.log($(this).attr('class'));
+      //console.log($(this).attr('class'));
       var selectButton = $(this).attr('class');
       if (selectButton === 'text-small'){
         $('.text-field').css('font-size','14px');
         $('.text-small').css({'background-color':'#555',
                               'color': '#fff'
-        });
+                             });
         $('.text-normal').css({'background-color':'#eee',
                               'color': '#999'
-        });
+                             });
         $('.text-large').css({'background-color':'#eee',
                               'color': '#999'
-        });
+                             });
       }
       else if (selectButton === 'text-normal'){
         $('.text-field').css('font-size','22px');
         $('.text-small').css({'background-color':'#eee',
                               'color': '#999'
-        });
+                             });
         $('.text-normal').css({'background-color':'#555',
                               'color': '#fff'
-        });
+                              });
         $('.text-large').css({'background-color':'#eee',
                               'color': '#999'
-        });
+                             });
       } 
       else
       {
         $('.text-field').css('font-size','36px');
-                $('.text-small').css({'background-color':'#eee',
+        $('.text-small').css({'background-color':'#eee',
                               'color': '#999'
-        });
+                             });
         $('.text-normal').css({'background-color':'#eee',
                               'color': '#999'
-        });
+                              });
         $('.text-large').css({'background-color':'#555',
                               'color': '#fff'
-        });
+                             });
       }
     });
   </script>
