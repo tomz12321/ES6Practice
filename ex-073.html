@@ -64,13 +64,13 @@
   <script type="text/javascript">
 
   // 1. 點擊 img 區塊時，將大圖的 src 網址，換成小圖的 src 網址。
-  // 2. 更換 avtice 這個 class 的擁有者。
+  // 2. 更換 active 這個 class 的擁有者。
 
   $('.img-list > a').on('click', function(e){
     // code here
     e.preventDefault();
     var targetSrc = $(this).children('img').attr('src');
-    //console.log($(this).children('img').attr('src'));
+
     $('.active').removeClass('active');
     $(this).toggleClass('active');
     $('.main-image').children('img').attr('src',targetSrc);
