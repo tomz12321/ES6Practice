@@ -65,13 +65,18 @@
 
   // todo: 1. 當使用者按下 add-profile 按鈕時，tbody 內要加入對應的內容
   $('.add-profile').on('click', function(){
-
+    console.log($('#firstName').val());
+    var insertFirstname = $('#firstName').val();
+    var insertLastname = $('#lastName').val();
+    var insertUsername = $('#userName').val();
+    console.log(insertFirstname);
+    $('.table tbody').last().append('<tr><th>4</th><td>'+insertFirstname+'</td><td>'+insertLastname+'</td><td>'+insertUsername+'</td><td><button class="btn btn-default del-profile">刪除</button></td></tr>');
 
   });
 
   // todo: 2. 完成 del 功能
   $('tbody').on('click', '.del-profile', function(){
-
+    $(this).parents('tr').remove();
   });
 
 
