@@ -69,8 +69,10 @@
     var insertFirstname = $('#firstName').val();
     var insertLastname = $('#lastName').val();
     var insertUsername = $('#userName').val();
+    var rowCount = $('.table tbody tr').length + 1;
     console.log(insertFirstname);
-    $('.table tbody').last().append('<tr><th>4</th><td>'+insertFirstname+'</td><td>'+insertLastname+'</td><td>'+insertUsername+'</td><td><button class="btn btn-default del-profile">刪除</button></td></tr>');
+    //$('.table tbody tr').after()
+    $('.table tbody').append('<tr><th>'+rowCount+'</th><td>'+insertFirstname+'</td><td>'+insertLastname+'</td><td>@'+insertUsername+'</td><td><button class="btn btn-default del-profile">刪除</button></td></tr>');
 
   });
 
