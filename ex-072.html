@@ -188,6 +188,12 @@
 
       $('.nav > li').on('click', function(){
         // code here
+        console.log($(this).data('show'));
+        var factorName = $(this).data('show');
+        for (var i = 0; i < 6 ; i++)
+          //console.log($('.content').children('div').eq(i));
+          $('.content').children('div').eq(i).removeClass('show');
+        $('.content-'+factorName).addClass('show');
 
       });
 
