@@ -80,8 +80,18 @@
   <script type="text/javascript">
 
   // 將前面的 class 切換改為透過 jQuery 的動畫 (show/hide/fade/slide....) 來呈現
-  $('.img-list').on('mouseenter mouseleave', function(){
+  $('.img-list').on('mouseenter', function(){
     $(this).children('.title').slideDown('500');
+    //cancel continuesly anime
+    //$(this).children('.title').stop()slideDown('500');
+    console.log('move1');
+  });
+
+  $('.img-list').on('mouseleave', function(){
+    $(this).children('.title').slideUp('500');
+    //cancel continuesly anime
+    //$(this).children('.title').stop().slideUp('500');
+    console.log('move2');
   });
 
   </script>
