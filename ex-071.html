@@ -80,7 +80,8 @@
   <script type="text/javascript">
   // todo: 按下 .img-list 之後完成所屬 .title.active 的切換
     $('.img-list').on('click',function(){
-      $(this).children('div').toggleClass('active');
+      //if there is a class name, e.g. title, use its class name
+      $(this).children('.title').toggleClass('active');
     })
 
   </script>
