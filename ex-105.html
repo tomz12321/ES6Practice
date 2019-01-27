@@ -77,7 +77,7 @@
 <div class="container-fluid bg-1 text-center">
   <h3 class="margin">Who Am I?</h3>
 
-  <img id="photo" src="http://i.imgur.com/CKSKPTA.jpg" id="picture" class="img-responsive img-circle margin"
+  <img id="photo" src="CKSKPTA.jpg" id="picture" class="img-responsive img-circle margin"
        style="display:inline" alt="" width="350" height="350">
 
   <h3>Hi, My name is <span class="name">Doraemon</span>, an adventurer!</h3>
@@ -112,9 +112,14 @@ $.ajax({
 
     // todo: 將透過 api 拿回來的資料更新至網頁上
     // 1. #photo    頭像
+    $('#photo').attr('src', data.results[0].picture.large);
+    console.log(data.results[0]);
     // 2. .name     姓名
+    $('.name').text(data.results[0].name.first+' '+data.results[0].name.last);
     // 3. .email    email
+    $('.email').text(data.results[0].email);
     // 4. .address  地址
+    $('.address').text(data.results[0].location.street+', '+data.results[0].location.city+', '+data.results[0].location.state+', '+data.results[0].location.postcode);
 
   }
 });
