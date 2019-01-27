@@ -53,11 +53,11 @@
 <script type="text/javascript">
 
   $('footer').on('mouseenter', function(){
-    $(this).animate({ bottom: 0 }, 700);
+    $(this).stop().animate({ bottom: 0 }, 700);
   });
 
   $('footer').on('mouseleave', function(){
-    $(this).animate({ bottom: '-100px' }, 700);
+    $(this).stop().animate({ bottom: '-100px' }, 700);
   });
 
 </script>
