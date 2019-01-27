@@ -60,7 +60,12 @@
     // 下一張
     $('.img-list-handler .next').on('click', function(e){
       e.preventDefault();
-      if(imgCurrPos <= 0 && imgCurrPos > -5 ){
+      if(imgCurrPos === -5)
+      {
+        imgCurrPos = 0;
+        $('.img-window').animate({'left':imgCurrPos * 400 + 'px'});
+      }
+      else if(imgCurrPos <= 0 && imgCurrPos > -5 ){
         imgCurrPos--;
         $('.img-window').animate({'left':imgCurrPos * 400 + 'px'});
         console.log(imgCurrPos * 400 + 'px' );
@@ -71,7 +76,12 @@
     // 前一張
     $('.img-list-handler .prev').on('click', function(e){
       e.preventDefault();
-      if(imgCurrPos < 0 && imgCurrPos >= -5){
+      if(imgCurrPos === 0)
+      {
+        imgCurrPos = -5;
+        $('.img-window').animate({'left':imgCurrPos * 400 + 'px'});
+      }
+      else if(imgCurrPos < 0 && imgCurrPos >= -5){
         imgCurrPos++;
         $('.img-window').animate({'left':imgCurrPos * 400 + 'px'});
         console.log(imgCurrPos * 400 + 'px' );
