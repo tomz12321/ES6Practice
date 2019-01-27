@@ -20,15 +20,18 @@ var getLottery = function( count ){
   var lottery = [];
   var number;
 
-  while( lottery.length < 6 ){
+  for (var i = 0;i < count; i++){
+    while( lottery.length < 6 ){
 
-    number = parseInt( Math.random() * 49 + 1, 10 );
+      number = parseInt( Math.random() * 49 + 1, 10 );
 
-    if( lottery.indexOf( number ) === -1 ){
-      lottery.push( number );
+      if( lottery.indexOf( number ) === -1 ){
+        lottery.push( number );
+      }
     }
+    console.log(lottery);
+    lottery = [];
   }
-  return lottery;
 
 };
 
