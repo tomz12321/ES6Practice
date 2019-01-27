@@ -84,12 +84,15 @@
   // 2. 請完成展開的功能
 
   $('.tag').on('click', function(e){
+    var that = this;
     e.preventDefault();
-    console.log($('.window').position());
+    console.log($('.window').position().left);
     if($('.window').position().left === 0)
-      $(this).parent().animate({'left':'-140px'});
+      $(this).parent().animate({'left':'-140px'},5000,function(){
+        console.log($(that).position().left);
+      });
     else if($('.window').position().left === -140)
-      $(this).parent().animate({'left':'0px'});
+      $(this).parent().animate({'left':'0px'},5000);
   });
 
 </script>
