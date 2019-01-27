@@ -89,6 +89,16 @@
       }
     });
 
+    var autoRun = function(){
+      window.setTimeout(
+          function(){
+            $('.img-list-handler .next').trigger('click');
+            window.setTimeout(autoRun,3000);
+          },3000
+        );
+    }
+    window.setTimeout(autoRun,3000);
+
   </script>
 
 </body>
