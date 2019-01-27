@@ -55,17 +55,28 @@
 
     // .img-window 的長度由圖片數量決定
     $('.img-window').css('width', $('.img-window img').length * 400 + 'px' );
-
+    console.log(imgCurrPos * 400 + 'px' );
+    console.log(imgCurrPos);
     // 下一張
     $('.img-list-handler .next').on('click', function(e){
       e.preventDefault();
-
+      if(imgCurrPos <= 0 && imgCurrPos > -5 ){
+        imgCurrPos--;
+        $('.img-window').animate({'left':imgCurrPos * 400 + 'px'});
+        console.log(imgCurrPos * 400 + 'px' );
+        console.log(imgCurrPos);
+      }
     });
 
     // 前一張
     $('.img-list-handler .prev').on('click', function(e){
       e.preventDefault();
-
+      if(imgCurrPos < 0 && imgCurrPos >= -5){
+        imgCurrPos++;
+        $('.img-window').animate({'left':imgCurrPos * 400 + 'px'});
+        console.log(imgCurrPos * 400 + 'px' );
+        console.log(imgCurrPos);
+      }
     });
 
   </script>
