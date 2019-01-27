@@ -207,7 +207,8 @@
 
       // todo: 透過 animate & scrollTop: 0 將捲軸送至頂端
       $('.go-top').on('click', function(e){
-
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0}, 1000);
       });
 
     </script>
