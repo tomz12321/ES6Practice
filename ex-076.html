@@ -70,7 +70,9 @@
 
   // code here
   $('.lead').on('click', function(){
-
+    var listname = $(this).data('lists');
+    console.log(listname);
+    $(this).parent().children('.'+listname).slideToggle();
   });
 
   </script>
