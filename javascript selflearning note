@@ -1,0 +1,33 @@
+= vs ===
+
+Is she 12 years old? -> age === 12
+&& || 
+
+
+var firstName = "John";
+var mentalAge = "13";
+var smoker = false;
+
+var placesVisitedArray = [London, Paris, Shanghai]
+var profileHash =
+    {
+        "first": London,
+        "second": Paris,
+    }
+
+ = practice 1. =
+
+var sunny = true;
+var stormy = true;
+
+if (sunny && stormy){
+  console.log("Your're in the eye of a hurricane");
+}
+
+function fullName(firstName, lastName){
+  var fullName = firstName + "" + lastName;
+    console.log(fullName);
+}
+
+.trim //remove the space before the string and after the string
+.length //the size of the string 
